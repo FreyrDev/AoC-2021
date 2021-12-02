@@ -3,7 +3,7 @@ stringToInts input = map read (words input)
 
 day1_1 :: [Int] -> Int
 day1_1 []     = 0
-day1_1 (x:xs) = sum $ zipWith (\x y -> if x < y then 1 else 0) (x:xs) xs
+day1_1 (x:xs) = length $ filter (<0) $ zipWith (-) (x:xs) xs
 
 day1_2 :: [Int] -> Int
 day1_2 []       = 0
