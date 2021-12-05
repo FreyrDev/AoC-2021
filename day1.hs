@@ -13,4 +13,5 @@ day1_2 (x:y:xs) = day1_1 $ zipWith3 (\x y z -> x + y + z) (x:y:xs) (y:xs) xs
 main :: IO ()
 main = do
     input <- readFile "inputs/day1.txt"
+    print . day1_1 . stringToInts $ input
     print . day1_2 . stringToInts $ input

@@ -22,4 +22,5 @@ day2_2 = uncurry (*) . go 0 (0,0)
 main :: IO ()
 main = do
     input <- readFile "inputs/day2.txt"
+    print . day2_1 . parse $ input
     print . day2_2 . parse $ input
