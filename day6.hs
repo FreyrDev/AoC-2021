@@ -24,6 +24,7 @@ day6V2 days input = go 0 (map (count input) [0,1,2,3,4,5,6,7,8])
             | n == days = sum xs
             | otherwise = go (succ n) (shift xs)
           shift (x:xs) = take 6 xs ++ [xs !! 6 + x] ++ [xs !! 7] ++ [x]
+          shift [] = []
           count xs n = length (filter (==n) xs)
 
 main :: IO ()
